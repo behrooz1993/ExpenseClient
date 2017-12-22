@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const Paths = {
+const paths = {
     DIST: path.resolve(__dirname, 'dist'),
     SRC: path.resolve(__dirname,'src'),
     JS: path.resolve(__dirname,'src/js'),
@@ -46,4 +46,9 @@ module.exports = {
       resolve: {
         extensions: ['.js', '.jsx'],
       },
+      devServer: {
+        inline: true,
+        port: 3000,
+        historyApiFallback: true
+      }
   };
